@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Famiglia - Private Access</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="smoke"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="boss-portrait">
+                <img src="boss.png" alt="The Boss">
+            </div>
+            <h1 class="logo">La Famiglia</h1>
+            <p class="tagline">"Leave the gun. Take the cannoli."</p>
+            <div class="divider"></div>
+            <p class="subtitle">Private Access • Cosa Nostra</p>
+        </header>
+
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="access">Access</button>
+            <button class="nav-tab" data-tab="games">Games</button>
+            <button class="nav-tab" data-tab="media">Media</button>
+            <button class="nav-tab" data-tab="business">Business</button>
+            <button class="nav-tab" data-tab="books">The Books</button>
+        </nav>
+
+        <section class="tab-content active" id="access">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2 class="panel-title">Secure Passage</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="access-form">
+                    <div class="input-group">
+                        <input type="text" class="url-input" id="urlInput" placeholder="Where you wanna go, capisce?">
+                        <button class="enter-btn" id="launchBtn">Enter</button>
+                    </div>
+                </div>
+
+                <div class="quote-box">
+                    "A friend of ours handles your business... nobody asks questions."
+                    <div class="quote-author">— The Don</div>
+                </div>
+
+                <h3 class="section-label">Our Associates</h3>
+
+                <div class="services-grid">
+                    <div class="service-card" data-url="https://google.com">
+                        <div class="service-icon">🎰</div>
+                        <div class="service-name">Google</div>
+                        <div class="service-desc">The Search</div>
+                    </div>
+                    <div class="service-card" data-url="https://youtube.com">
+                        <div class="service-icon">🎬</div>
+                        <div class="service-name">YouTube</div>
+                        <div class="service-desc">The Pictures</div>
+                    </div>
+                    <div class="service-card" data-url="https://discord.com">
+                        <div class="service-icon">💼</div>
+                        <div class="service-name">Discord</div>
+                        <div class="service-desc">The Chat</div>
+                    </div>
+                    <div class="service-card" data-url="https://reddit.com">
+                        <div class="service-icon">📰</div>
+                        <div class="service-name">Reddit</div>
+                        <div class="service-desc">The News</div>
+                    </div>
+                    <div class="service-card" data-url="https://twitter.com">
+                        <div class="service-icon">🕊️</div>
+                        <div class="service-name">Twitter</div>
+                        <div class="service-desc">The Wire</div>
+                    </div>
+                    <div class="service-card" data-url="https://github.com">
+                        <div class="service-icon">⚙️</div>
+                        <div class="service-name">GitHub</div>
+                        <div class="service-desc">The Vault</div>
+                    </div>
+                </div>
+
+                <div class="ledger">
+                    <div class="ledger-entry">
+                        <div class="ledger-label">Today</div>
+                        <div class="ledger-amount" id="todayCount">0</div>
+                        <div class="ledger-bar">
+                            <div class="ledger-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="ledger-entry">
+                        <div class="ledger-label">This Week</div>
+                        <div class="ledger-amount" id="weekCount">0</div>
+                        <div class="ledger-bar">
+                            <div class="ledger-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="ledger-entry">
+                        <div class="ledger-label">All Time</div>
+                        <div class="ledger-amount" id="totalCount">0</div>
+                        <div class="ledger-bar">
+                            <div class="ledger-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="iframe-panel" id="iframePanel">
+                <div class="iframe-header">
+                    <div class="iframe-controls">
+                        <button class="control-btn" id="backBtn">◄</button>
+                        <button class="control-btn" id="reloadBtn">⟳</button>
+                        <button class="control-btn" id="homeBtn">⌂</button>
+                    </div>
+                    <div class="current-url" id="currentUrl">about:blank</div>
+                    <button class="control-btn close-btn" id="closeBtn">✕</button>
+                </div>
+                <iframe id="proxyFrame" class="proxy-iframe"></iframe>
+            </div>
+        </section>
+
+        <section class="tab-content" id="games">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2 class="panel-title">The Casino</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card" data-url="https://poki.com">
+                        <div class="service-icon">🎲</div>
+                        <div class="service-name">Poki</div>
+                        <div class="service-desc">House Games</div>
+                    </div>
+                    <div class="service-card" data-url="https://crazygames.com">
+                        <div class="service-icon">🃏</div>
+                        <div class="service-name">Crazy Games</div>
+                        <div class="service-desc">High Stakes</div>
+                    </div>
+                    <div class="service-card" data-url="https://krunker.io">
+                        <div class="service-icon">🔫</div>
+                        <div class="service-name">Krunker</div>
+                        <div class="service-desc">The Shooter</div>
+                    </div>
+                    <div class="service-card" data-url="https://slither.io">
+                        <div class="service-icon">🐍</div>
+                        <div class="service-name">Slither</div>
+                        <div class="service-desc">The Snake</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-content" id="media">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2 class="panel-title">Entertainment</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card" data-url="https://spotify.com">
+                        <div class="service-icon">🎵</div>
+                        <div class="service-name">Spotify</div>
+                        <div class="service-desc">The Music</div>
+                    </div>
+                    <div class="service-card" data-url="https://soundcloud.com">
+                        <div class="service-icon">🎺</div>
+                        <div class="service-name">SoundCloud</div>
+                        <div class="service-desc">The Jukebox</div>
+                    </div>
+                    <div class="service-card" data-url="https://twitch.tv">
+                        <div class="service-icon">📺</div>
+                        <div class="service-name">Twitch</div>
+                        <div class="service-desc">Live Show</div>
+                    </div>
+                    <div class="service-card" data-url="https://netflix.com">
+                        <div class="service-icon">🎭</div>
+                        <div class="service-name">Netflix</div>
+                        <div class="service-desc">The Theater</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-content" id="business">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2 class="panel-title">The Operations</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card" data-url="https://chat.openai.com">
+                        <div class="service-icon">🤖</div>
+                        <div class="service-name">ChatGPT</div>
+                        <div class="service-desc">The Advisor</div>
+                    </div>
+                    <div class="service-card" data-url="https://claude.ai">
+                        <div class="service-icon">💎</div>
+                        <div class="service-name">Claude</div>
+                        <div class="service-desc">The Consigliere</div>
+                    </div>
+                    <div class="service-card" data-url="https://translate.google.com">
+                        <div class="service-icon">🌍</div>
+                        <div class="service-name">Translate</div>
+                        <div class="service-desc">The Interpreter</div>
+                    </div>
+                    <div class="service-card" data-url="https://www.wolframalpha.com">
+                        <div class="service-icon">📊</div>
+                        <div class="service-name">Wolfram</div>
+                        <div class="service-desc">The Accountant</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-content" id="books">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2 class="panel-title">The Ledger</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="quote-box">
+                    "We keep the books clean. Every transaction... accounted for."
+                    <div class="quote-author">— The Accountant</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
